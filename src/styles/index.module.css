@@ -1,25 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html {
     background-color: black;
+    background-image: url('../images//background.png');
+    background-size: cover;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 5rem;
 }
 
 .sectionImage {
     height: auto;
     width: 50rem;
+    object-fit: cover;
 }
 
 .topBar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 50rem;
+    width: 80rem;
+    margin-bottom: 5rem;
 }
 
 .navBar {
@@ -29,12 +34,114 @@ html {
     align-items: center;
 }
 
-.navText {
+.navText, .buttonText, .bodyText, .formText {
     font-family: 'Barlow', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
+    font-weight: 400;
+    font-size: 1rem;
     color: white;
-    margin: 10px;
+}
+
+.formText {
+    font-weight: 500;
+}
+
+.bodyText {
+    font-size: 1.5rem;
+    width: 58rem;
+}
+
+.textEm {
+    font-style: italic;
+}
+
+
+
+.navText {
+    margin: 10px;  
+    font-weight: 500; 
+}
+
+.link {
+    color: #2F80ED;
+}
+
+.header {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4rem;
+    line-height: 5rem;
+    color: white;
+    width: 45rem;
+    margin-bottom: 2rem;
+}
+
+.button {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: max-content;
+}
+
+.padS {
+    padding: 0.8rem 1rem;
+}
+
+.padMed {
+    padding: 13px 55px;
+}
+
+.hover {
+    background: #2F80ED;
+}
+
+.memberCard {
+    border-radius: 20px;
+    background:rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 2rem 3rem;
+    align-items: center;
+    max-width: 18rem;
+}
+
+.memberImage {
+    border-radius: 100%;
+    width: 9rem;
+    height: 9rem;
+}
+
+.memberName, .memberBody {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.4rem;
+}
+
+.memberName {
+    font-size: 1.5rem;
+    margin: 2rem
+}
+
+.memberCardList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.formField {
+    border-radius: 10px;
+    background:rgba(255, 255, 255, 0.2);
+    flex: 1;
+    padding: 1rem;
+    margin: 0 1rem 1.5rem 0;
+}
+.longResponse {
+    padding-bottom: 10rem;
 }
