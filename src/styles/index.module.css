@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&display=swap');
+
 html {
     background-color: black;
 }
 
 .container {
-    justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,5 +12,29 @@ html {
 
 .sectionImage {
     height: auto;
-    width: 800px;
+    width: 50rem;
+}
+
+.topBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50rem;
+}
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navText {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: white;
+    margin: 10px;
 }
