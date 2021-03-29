@@ -10,21 +10,19 @@ html {
 .container {
     display: flex;
     flex-direction: column;
-    padding: 5rem;
-}
-
-.sectionImage {
-    height: auto;
-    width: 50rem;
-    object-fit: cover;
+    padding: 8rem 5rem 7rem 5rem;
 }
 
 .topBar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80rem;
-    margin-bottom: 5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    padding: 1rem 6rem;
 }
 
 .navBar {
@@ -32,9 +30,11 @@ html {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-right: 12rem;
+    list-style-type: none;
 }
 
-.navText, .buttonText, .bodyText, .formText {
+.navText, .buttonText, .bodyText, .formText, ::placeholder {
     font-family: 'Barlow', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -42,19 +42,18 @@ html {
     color: white;
 }
 
-.formText {
+.formText, ::placeholder {
     font-weight: 500;
 }
 
 .bodyText {
     font-size: 1.5rem;
-    width: 58rem;
+    max-width: 58rem;
 }
 
 .textEm {
     font-style: italic;
 }
-
 
 
 .navText {
@@ -73,7 +72,8 @@ html {
     font-size: 4rem;
     line-height: 5rem;
     color: white;
-    width: 45rem;
+    max-width: 45rem;
+    min-width: 22rem;
     margin-bottom: 2rem;
 }
 
@@ -104,6 +104,7 @@ html {
     padding: 2rem 3rem;
     align-items: center;
     max-width: 18rem;
+    min-width: 15rem;
 }
 
 .memberImage {
@@ -138,10 +139,38 @@ html {
 .formField {
     border-radius: 10px;
     background:rgba(255, 255, 255, 0.2);
-    flex: 1;
     padding: 1rem;
     margin: 0 1rem 1.5rem 0;
+    border: 0;
+    flex: 1;
 }
-.longResponse {
-    padding-bottom: 10rem;
+
+.contactText {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2rem;
+    color: white;
+    max-width: 30rem;
+    margin-bottom: 3rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 32rem;
+    height: 30rem;
+}
+
+.contactSection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80rem;
+    justify-content: space-between;
 }
