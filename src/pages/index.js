@@ -8,7 +8,9 @@ import niehaus from '../images/niehaus.jpeg'
 import lawrence from '../images/lawrence.jpeg'
 import linkedin from '../images/linkedin.svg'
 import email from '../images/email.svg'
-import { Link, animateScroll as scroll } from "react-scroll";
+import menu from '../images/menu.svg'
+import { Link } from "react-scroll"
+import useWindowDimensions from '../utils/useWindowDimensions'
 
 export default function Home() {
   return (
@@ -23,7 +25,7 @@ export default function Home() {
             onClick={() => console.log('read paper')}>
               Read Our White Paper
           </Button>
-          <div style={{margin: '50rem'}}></div>
+          <div style={{margin: '142rem'}}></div>
         </div>
 
         <div id='about-us'>
@@ -34,7 +36,7 @@ export default function Home() {
             To address this gap, we have put forth the <em className={indexStyles.link}>Autonomous Vehicle Modular Safety Suite White Paper</em>. <br /> <br /> <br />
             View a summary of our white paper <span className={indexStyles.link}>here</span>. 
           </div>
-          <div style={{margin: '30rem'}}></div>
+          <div style={{margin: '60rem'}}></div>
         </div>
 
         <div id='our-team'>
@@ -55,21 +57,7 @@ export default function Home() {
             <div className={indexStyles.contactText}>
               Submit your queries here and we will get back to you as soon as possible. 
             </div>
-            <div className={indexStyles.form}>
-              <div className={indexStyles.row}>
-                <FormField name='First Name'/>
-                <FormField name='Last Name' />
-              </div>
-              <div className={indexStyles.row}>
-                <FormField name='Email' />
-              </div>
-              <FormField name='Message' type='long'/>
-              <Button 
-                padding={'med'} 
-                onClick={() => console.log('submit')}>
-                  Submit
-              </Button>
-            </div>
+            <Form />
           </div>
         </div>
 
@@ -103,13 +91,19 @@ const NavBarItem = ({name, id}) => {
 }
 
 const NavBar = () => {
+  let { width } = useWindowDimensions();
+  let widthRem = width/10;
+  const navBarStyle = `${indexStyles.navBar} ${widthRem > 110 ? indexStyles.row : indexStyles.hidden}`
   return (
-    <ul className={indexStyles.navBar}>
-      <li><NavBarItem id='home' name='Home'/></li>
-      <li><NavBarItem id='about-us' name='About Us'/></li>
-      <li><NavBarItem id='our-team' name='Our Team'/></li>
-      <li><NavBarItem id='contact-us' name='Contact Us'/></li>
-    </ul>
+    <div>
+      {widthRem <= 110 && <div style={{marginRight: '36rem'}}> <img src={menu} alt='navigation menu'/> </div>}
+      <ul className={navBarStyle}>
+        <li><NavBarItem id='home' name='Home'/></li>
+        <li><NavBarItem id='about-us' name='About Us'/></li>
+        <li><NavBarItem id='our-team' name='Our Team'/></li>
+        <li><NavBarItem id='contact-us' name='Contact Us'/></li>
+      </ul>
+    </div>
   );
 }
 
@@ -125,8 +119,11 @@ const Button = ({padding, onClick, children}) => {
   const buttonPadding = padding === 'small' ? indexStyles.padS : indexStyles.padMed;
   return (
     <div 
+      role='button'
       className={`${indexStyles.button} ${buttonPadding}`}
-      onClick={onClick}>
+      onClick={onClick}
+      onKeyDown={onClick}
+      tabIndex={0}>
         <span className={indexStyles.buttonText}>{children}</span>
     </div>
   );
@@ -140,7 +137,7 @@ const MemberCard = ({name, text, img, alt}) => {
       <div className={indexStyles.memberBody}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis arcu orci, malesuada vel turpis id, porttitor elementum eros. Vivamus non erat venenatis, tempus ante gravida, fermentum sapien. Nam quis ligula sem. Etiam a sollicitudin urna. Fusce eleifend dapibus ipsum. Ut commodo nibh nunc, et bibendum odio scelerisque ut.
       </div>
-      <div style={{width: '50%', justifyContent: 'space-evenly', display: 'flex'}}>
+      <div className={indexStyles.socialIcons}>
         <img src={email} alt='email icon'/>
         <img src={linkedin} alt='Linkedin logo'/>
       </div>
@@ -152,7 +149,7 @@ const FormField = ({name, type}) => {
   return (
     type === 'long' ?
     <textarea 
-      className={`${indexStyles.formField} ${indexStyles.formText}`} 
+      className={`${indexStyles.formField} ${indexStyles.formText} ${indexStyles.long}`} 
       placeholder={name}
     /> :
     <input 
@@ -161,3 +158,25 @@ const FormField = ({name, type}) => {
       placeholder={name}/>  
   )
 }
+
+const Form = () => {
+  return (
+    <div className={indexStyles.form}>
+      <div className={indexStyles.row}>
+        <FormField name='First Name'/>
+        <FormField name='Last Name' />
+      </div>
+      <div className={indexStyles.row}>
+        <FormField name='Email' />
+      </div>
+      <FormField name='Message' type='long'/>
+      <Button 
+        padding={'med'} 
+        onClick={() => console.log('submit')}>
+          Submit
+      </Button>
+    </div>
+  );
+}
+
+
