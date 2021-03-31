@@ -6,6 +6,5 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: '/av-combinator-website',
   plugins: [],
 }
