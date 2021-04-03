@@ -3,52 +3,15 @@
 
 html {
     background-color: black;
-    background-image: url('../images/background.png');
-    background-size: cover;
     font-size: 62.5%;
-    background-repeat: no-repeat;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    padding: 18rem 18rem 8rem 18rem;
-}
-
-.topBar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: black;
-    padding: 4rem 18rem;
-}
-
-.navBar {
-    justify-content: center;
-    align-items: center;
-    margin-right: 36rem;
-    list-style-type: none;
-}
-
-.hidden {
-    display: none
-}
-
-.navText, .buttonText, .bodyText, .formText, ::placeholder {
+.text, ::placeholder {
     font-family: 'Barlow', sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
+    font-weight: normal;
     color: white;
-}
-
-.formText, ::placeholder {
-    font-weight: 500;
-    font-size: 2.37rem;
+    font-size: 2rem;
 }
 
 .bodyText {
@@ -56,21 +19,37 @@ html {
     max-width: 84.1rem;
 }
 
-.textEm {
-    font-style: italic;
-}
-
-
 .navText {
+    font-weight: 500;
     margin: 1rem;  
-    font-weight: 500; 
 }
 
-.link {
+.memberName, .memberBody {
+    text-align: center;
+    line-height: 1.89rem;
+    max-width: 28rem;
+    font-size: 2.78rem;
+    margin: 2.2rem
+}
+
+.memberBody {
+    flex: 2;
+    font-size: 1.575rem;
+    margin: 0 0 3.2rem 0;
+}
+
+.contactText {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    max-width: 43.2rem;
+    margin-bottom: 3rem;
+}
+
+.link, a, .navText:hover {
     color: #2F80ED;
 }
 
-.header {
+h1 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -82,8 +61,76 @@ html {
     margin-bottom: 2rem;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home {
+    padding-bottom: 58rem;
+    background-image: url('../images/home.jpeg')
+}
+
+.about {
+    padding-top: 10rem;
+    padding-bottom: 38rem;
+    background-size: contain;
+    background-image: url('../images/about.jpeg');
+}
+
+.contact {
+    background-image: url('../images/contact.jpeg');
+}
+
+.homeSmall {
+    background-image: url('../images/home-small.jpeg');
+    padding-bottom: 50rem;
+    background-size: cover;
+    background-position: center left;
+}
+
+.aboutSmall {
+    background-image: url('../images/about-small.jpeg');
+    padding-bottom: 30rem;
+    background-size: contain;
+    background-position: bottom right;
+}
+
+.contactSmall {
+    background-image: url('../images/contact-small.jpeg');
+    padding-bottom: 40rem;
+    background-size: contain;
+    background-position: bottom;
+}
+
+
+
+.topBar {
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    padding: 4rem 5rem;
+}
+
+.navBar {
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 10rem;
+}
+
+.navMenu {
+    margin-right: 10em;
+}
+
 .button {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(15, 12, 12, 0.1);
     border-radius: 1rem;
     width: max-content;
 }
@@ -100,10 +147,6 @@ html {
     padding: 1.6rem 5.5rem;
 }
 
-.hover {
-    background: #2F80ED;
-}
-
 .memberCard {
     border-radius: 2rem;
     background:rgba(255, 255, 255, 0.1);
@@ -112,8 +155,10 @@ html {
     margin: 1.8rem;
     padding: 2rem 4rem;
     align-items: center;
-    max-width: 30rem;
-    min-width: 25rem;
+    max-width: 36rem;
+    min-width: 33rem;
+    box-sizing: border-box;
+    height: 50rem;
 }
 
 .memberImage {
@@ -121,27 +166,7 @@ html {
     width: 14.5rem;
     height: 14.5rem;
 }
-
-.memberName, .memberBody {
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.575rem;
-    color: white;
-    text-align: center;
-    margin-bottom: 3.2rem;
-    line-height: 1.89rem;
-    max-width: 28rem;
-}
-
-.memberName {
-    font-size: 2.78rem;
-    margin: 2.2rem
-}
-
 .memberCardList {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -151,6 +176,7 @@ html {
     justify-content: space-between;
     display: flex;
     margin-bottom: 2rem;
+    align-items: center;
     
 }
 
@@ -163,21 +189,16 @@ html {
     min-height: 6rem;
     flex: 1;
     min-width: 10rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    overflow: auto;
+    resize: none;
 }
 
 .formField:last-child, .long {
     margin-right: 0;
-}
-
-.contactText {
-    font-family: 'Barlow', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 3rem;
-    line-height: 3.6rem;
-    color: white;
-    max-width: 43.2rem;
-    margin-bottom: 3rem;
 }
 
 .row {
@@ -188,14 +209,106 @@ html {
 .form {
     display: flex;
     flex-direction: column;
-    width: 64rem;
-    height: 64rem;
+    width: 55rem;
+    height: 55rem;
     min-width: 40rem;
+    font-size: 2.37rem;
 }
 
 .contactSection {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 25px;
+    left: 25px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  .navMenu input
+  {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .navMenu span
+  {
+    display: flex;
+    width: 29px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  .navMenu span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+  
+  .navMenu span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  
+  .navMenu input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #36383F;
+  }
+  .navMenu input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  .navMenu input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  .navMenuItems
+  {
+    position: absolute;
+    width: 18rem;
+    height: 100rem;
+    margin: -5.0rem 0 0 -5.0rem;
+    padding: 5.0rem;
+    padding-top: 12.5rem;
+    background-color:rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    right: -3rem;
+  }
+  
+  .navMenuItems li
+  {
+    padding: 10px 0;
+    transition-delay: 2s;
+  }
+  
+  .navMenu input:checked ~ ul
+  {
+    transform: none;
+  }
