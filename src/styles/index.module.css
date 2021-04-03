@@ -70,8 +70,10 @@ h1 {
 }
 
 .home {
+    padding-top: 20rem;
     padding-bottom: 58rem;
-    background-image: url('../assets/home.png')
+    background-position: top left;
+    background-image: url('../assets/home.jpg')
 }
 
 .about {
@@ -86,7 +88,7 @@ h1 {
 }
 
 .homeSmall {
-    background-image: url('../assets/home-small.png');
+    background-image: url('../assets/home-small.jpg');
     padding-bottom: 50rem;
     background-size: cover;
     background-position: center left;
