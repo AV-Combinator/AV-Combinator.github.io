@@ -4,17 +4,17 @@ import { Link } from "react-scroll"
 import useWindowDimensions from '../utils/useWindowDimensions'
 
 // import icons used in webpages
-import logo from '../images/logo.svg'
-import linkedinIcon from '../images/linkedin.svg'
-import emailIcon from '../images/email.svg'
+import logo from '../assets/logo.svg'
+import linkedinIcon from '../assets/linkedin.svg'
+import emailIcon from '../assets/email.svg'
 
 // import user profile images
-import nehmad from '../images/nehmad.jpeg'
-import sun from '../images/sun.jpeg'
-import hu from '../images/hu.jpeg'
+import nehmad from '../assets/nehmad.jpeg'
+import sun from '../assets/sun.jpeg'
+import hu from '../assets/hu.jpeg'
 
 // import white paper document
-import whitePaper from "../../public/AV Combinator MSS White Paper.pdf"
+import whitePaper from "../assets/AV Combinator MSS White Paper.pdf"
 
 
 const memberData = [

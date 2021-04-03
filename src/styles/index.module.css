@@ -71,36 +71,36 @@ h1 {
 
 .home {
     padding-bottom: 58rem;
-    background-image: url('../images/home.jpeg')
+    background-image: url('../assets/home.png')
 }
 
 .about {
     padding-top: 10rem;
     padding-bottom: 38rem;
     background-size: contain;
-    background-image: url('../images/about.jpeg');
+    background-image: url('../assets/about.png');
 }
 
 .contact {
-    background-image: url('../images/contact.jpeg');
+    background-image: url('../assets/contact.png');
 }
 
 .homeSmall {
-    background-image: url('../images/home-small.jpeg');
+    background-image: url('../assets/home-small.png');
     padding-bottom: 50rem;
     background-size: cover;
     background-position: center left;
 }
 
 .aboutSmall {
-    background-image: url('../images/about-small.jpeg');
+    background-image: url('../assets/about-small.png');
     padding-bottom: 30rem;
     background-size: contain;
     background-position: bottom right;
 }
 
 .contactSmall {
-    background-image: url('../images/contact-small.jpeg');
+    background-image: url('../assets/contact-small.png');
     padding-bottom: 40rem;
     background-size: contain;
     background-position: bottom;
