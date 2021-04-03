@@ -82,7 +82,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id='our-team' className={`${indexStyles.container} ${indexStyles.team}`}>
+        <Section id='our-team' className={indexStyles.container}>
           <h1>Our Team</h1>
           <div className={`${indexStyles.memberCardList} ${indexStyles.row}`}>
             {memberData.map((member) => <MemberCard {...member} />)}
